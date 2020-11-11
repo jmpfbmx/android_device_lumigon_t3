@@ -6,10 +6,10 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-dalv
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
 # Vendor
-$(call inherit-product, vendor/leeco/x3/x3-vendor-blobs.mk)
+$(call inherit-product, vendor/lumigon/t3/t3-vendor.mk)
 
 # Folder path
-DEVICE_PATH := device/leeco/x3
+DEVICE_PATH := device/lumigon/t3
 
 # Overlay Folder
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
@@ -19,7 +19,7 @@ PRODUCT_AAPT_CONFIG := normal xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := x3,X500,X507,X509,X3,x500,x507,x509,X502,x502
+TARGET_OTA_ASSERT_DEVICE := t3,T3
 
 # Power
 PRODUCT_PACKAGES += \

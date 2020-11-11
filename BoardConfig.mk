@@ -1,6 +1,6 @@
--include vendor/leeco/x3/BoardConfigVendor.mk
+-include vendor/lumigon/t3/BoardConfigVendor.mk
 
-DEVICE_PATH := device/leeco/x3
+DEVICE_PATH := device/lumigon/t3
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -51,21 +51,11 @@ BOARD_DISABLE_HW_ID_MATCH_CHECK := true
 # Kernel
 TARGET_USES_64_BIT_BINDER := true
 TARGET_IS_64_BIT := true
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive androidboot.verifiedbootstate=green
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := \
-	--base 0x40078000 \
-	--pagesize 2048 \
-	--kernel_offset 0x00008000 \
-	--ramdisk_offset 0x03f88000 \
-	--second_offset 0x00e88000 \
-	--tags_offset 0x0df88000 \
-	--board MT6795
-TARGET_KERNEL_SOURCE := kernel/leeco/x3
-TARGET_KERNEL_CONFIG := x500_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x40f00000 --tags_offset 0x0df88000 --board 1453346013
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 # build old-style zip files (required for ota updater)
 BLOCK_BASED_OTA := false
@@ -76,8 +66,8 @@ TARGET_CPU_MEMCPY_OPT_DISABLE := true
 # Display
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := $(DEVICE_PATH)/configs/egl.cfg
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 BOARD_EGL_NEEDS_HANDLE_VALUE := true
 MTK_HWC_SUPPORT := yes
@@ -174,7 +164,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/leeco/x3/sepolicy
+BOARD_SEPOLICY_DIRS += device/lumigon/t3/sepolicy
 
 # Seccomp Filter
 BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/seccomp
