@@ -146,24 +146,51 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 444596224
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# LZMA compression for ramdisk
-LZMA_RAMDISK_TARGETS += recovery 
-
-# Recovery
-ifeq ($(WITH_TWRP),true)
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/ramdisk/twrp.fstab
+# TWRP stuff
+ifeq ($(RECOVERY_VARIANT), twrp)
+TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+DEVICE_RESOLUTION := 720x1280
+DEVICE_SCREEN_WIDTH := 720
+DEVICE_SCREEN_HEIGHT := 1280
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/bus.2/11270000.USB3/musb-hdrc/gadget/lun0/file
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness\"
+BOARD_HAS_NO_SELECT_BUTTON := true
+TW_NO_REBOOT_BOOTLOADER := true
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery.fstab
+#TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/etc/twrp.fstab
+TW_THEME := portrait_hdpi
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_MAX_BRIGHTNESS := 255
+BOARD_SUPPRESS_SECURE_ERASE := true
+TW_INCLUDE_CRYPTO := true
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/dm-0" # i think it's here?
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data =ordered"
+TW_MAX_BRIGHTNESS := 255
+#TW_NO_USB_STORAGE := true
+BOARD_USE_FRAMEBUFFER_ALPHA_CHANNEL := true
+TARGET_DISABLE_TRIPLE_BUFFERING := false
 else
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/ramdisk/fstab.mt6795
-endif
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
+# CWM
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 BOARD_SUPPRESS_EMMC_WIPE := true
-BOARD_USE_FRAMEBUFFER_ALPHA_CHANNEL := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-RECOVERY_SDCARD_ON_DATA := true
-TARGET_DISABLE_TRIPLE_BUFFERING := false
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+TARGET_USERIMAGES_USE_EXT4 := true
+endif
 
 # system.prop
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
