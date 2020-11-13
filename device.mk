@@ -210,10 +210,13 @@ PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/configs/bluetooth/bt_stack.conf.sqc:system/etc/bluetooth/bt_stack.conf.sqc
 
 PRODUCT_COPY_FILES += \
+	$(DEVICE_PATH)/configs/keylayout/ACCDET.kl:system/usr/keylayout/ACCDET.kl \
+    $(DEVICE_PATH)/configs/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    $(DEVICE_PATH)/configs/keylayout/backtouchpanel.kl:system/usr/keylayout/backtouchpanel.kl \
+    $(DEVICE_PATH)/configs/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
 	$(DEVICE_PATH)/configs/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
-	$(DEVICE_PATH)/configs/keylayout/ACCDET.kl:system/usr/keylayout/ACCDET.kl\
 	$(DEVICE_PATH)/configs/keylayout/mtk-tpd.kl:system/usr/keylayout/mtk-tpd.kl\
-	$(DEVICE_PATH)/configs/keylayout/synaptics_dsx_i2c.kl:system/usr/keylayout/synaptics_dsx_i2c.kl
+	$(DEVICE_PATH)/configs/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
 
 PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/configs/ril_conf/ecc_list.xml:system/etc/ecc_list.xml \

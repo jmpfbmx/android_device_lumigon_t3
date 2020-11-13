@@ -12,16 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# Generic key layout file for full alphabetic US English PC style external keyboards.
-#
-# This file is intentionally very generic and is intended to support a broad rang of keyboards.
-# Do not edit the generic key layout to support a specific keyboard; instead, create
-# a new key layout file with the required keyboard configuration.
-#
+# Key layout used for Bluetooth AVRCP support.
 
-key 158   BACK              VIRTUAL
-key 172   HOME		    VIRTUAL
-key 580   APP_SWITCH	    VIRTUAL
-
-
+key 200   MEDIA_PLAY
+key 201   MEDIA_PAUSE
+key 166   MEDIA_STOP
+key 163   MEDIA_NEXT
+key 165   MEDIA_PREVIOUS
+key 168   MEDIA_REWIND
+key 208   MEDIA_FAST_FORWARD
