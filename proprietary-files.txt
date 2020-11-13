@@ -231,6 +231,7 @@ lib/libmtk_drvb.so
 lib/libmtkjpeg.so
 lib/libmtklimiter.so
 lib/libmtk_mmutils.so
+lib/libmtknfc_dynamic_load_jni.so
 lib/libMtkOmxAdpcmDec.so
 lib/libMtkOmxAdpcmEnc.so
 lib/libMtkOmxAlacDec.so
@@ -282,6 +283,7 @@ lib/libudf.so
 lib/libui_ext.so
 lib/libvc1dec_sa.ca7.so
 lib/libvcodec_cap.so
+lib/libvcodec_oal.so
 lib/libvcodecdrv.so
 lib/libvcodec_utility.so
 lib/libvie_jni.so
@@ -311,6 +313,7 @@ lib64/hw/lights.mt6795.so
 lib64/hw/memtrack.mt6795.so
 lib64/hw/mmsdk.mt6795.so
 lib64/hw/sensors.mt6795.so
+lib64/lib_fpc_ta_shared.so
 lib64/lib3a_sample.so
 lib64/lib3a.so
 lib64/liba3m.so
@@ -371,6 +374,7 @@ lib64/libem_usb_jni.so
 lib64/libem_wifi_jni.so
 lib64/libfeatureio.so
 lib64/libfile_op.so
+lib64/libgas.so
 lib64/libged.so
 lib64/libgpu_aux.so
 lib64/libgralloc_extra.so
@@ -415,6 +419,7 @@ lib64/libmtk_drvb.so
 lib64/libmtkjpeg.so
 lib64/libmtklimiter.so
 lib64/libmtk_mmutils.so
+lib64/libmtknfc_dynamic_load_jni.so
 lib64/libMtkOmxCore.so
 lib64/libmtkplayer.so
 lib64/libmtkshifter.so
@@ -460,6 +465,7 @@ lib64/libvt_avsync.so
 lib64/libvtmal.so
 lib64/libvt_socketbind.so
 lib64/libwapi.so
+lib64/libwifitest.so
 lib64/mtk-rilmd2.so
 lib64/mtk-ril.so
 lib64/volte_imsm.so
