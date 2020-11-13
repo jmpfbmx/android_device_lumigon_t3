@@ -19,7 +19,7 @@ PRODUCT_AAPT_CONFIG := normal xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := t3,T3
+TARGET_OTA_ASSERT_DEVICE := Lumigon_T3,t3,T3
 
 # Power
 PRODUCT_PACKAGES += \
