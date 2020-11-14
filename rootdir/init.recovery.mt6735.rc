@@ -1,0 +1,34 @@
+on boot
+
+# Temp Backward compatibility
+    mkdir /dev/block/platform/mtk-msdc.0/by-name 0755 system system
+    symlink /dev/block/mmcblk0p1 /dev/block/platform/mtk-msdc.0/by-name/proinfo
+    symlink /dev/block/mmcblk0p2 /dev/block/platform/mtk-msdc.0/by-name/nvram		
+    symlink /dev/block/mmcblk0p3 /dev/block/platform/mtk-msdc.0/by-name/protect1		
+    symlink /dev/block/mmcblk0p4 /dev/block/platform/mtk-msdc.0/by-name/protect2		
+    symlink /dev/block/mmcblk0p21 /dev/block/platform/mtk-msdc.0/by-name/hidden       
+    symlink /dev/block/mmcblk0p18 /dev/block/platform/mtk-msdc.0/by-name/box          
+    symlink /dev/block/mmcblk0p22 /dev/block/platform/mtk-msdc.0/by-name/cda 			
+    symlink /dev/block/mmcblk0p17 /dev/block/platform/mtk-msdc.0/by-name/multlogo 	
+    symlink /dev/block/mmcblk0p5 /dev/block/platform/mtk-msdc.0/by-name/lk		    
+    symlink /dev/block/mmcblk0p6 /dev/block/platform/mtk-msdc.0/by-name/para		    
+    symlink /dev/block/mmcblk0p7 /dev/block/platform/mtk-msdc.0/by-name/boot		    
+    symlink /dev/block/mmcblk0p23 /dev/block/platform/mtk-msdc.0/by-name/ftm_boot	    
+    symlink /dev/block/mmcblk0p8 /dev/block/platform/mtk-msdc.0/by-name/recovery		
+    symlink /dev/block/mmcblk0p9 /dev/block/platform/mtk-msdc.0/by-name/logo		    
+    symlink /dev/block/mmcblk0p10 /dev/block/platform/mtk-msdc.0/by-name/expdb
+    symlink /dev/block/mmcblk0p20 /dev/block/platform/mtk-msdc.0/by-name/sutinfo      
+    symlink /dev/block/mmcblk0p11 /dev/block/platform/mtk-msdc.0/by-name/seccfg
+    symlink /dev/block/mmcblk0p12 /dev/block/platform/mtk-msdc.0/by-name/oemkeystore  
+    symlink /dev/block/mmcblk0p13 /dev/block/platform/mtk-msdc.0/by-name/secro		
+    symlink /dev/block/mmcblk0p14 /dev/block/platform/mtk-msdc.0/by-name/keystore     
+    symlink /dev/block/mmcblk0p15 /dev/block/platform/mtk-msdc.0/by-name/tee1		    
+    symlink /dev/block/mmcblk0p16 /dev/block/platform/mtk-msdc.0/by-name/tee2		    
+    symlink /dev/block/mmcblk0p25 /dev/block/platform/mtk-msdc.0/by-name/frp		    
+    symlink /dev/block/mmcblk0p26 /dev/block/platform/mtk-msdc.0/by-name/nvdata		
+    symlink /dev/block/mmcblk0p27 /dev/block/platform/mtk-msdc.0/by-name/metadata
+    symlink /dev/block/mmcblk0p19 /dev/block/platform/mtk-msdc.0/by-name/sys_info    
+    symlink /dev/block/mmcblk0p28 /dev/block/platform/mtk-msdc.0/by-name/system
+    symlink /dev/block/mmcblk0p24 /dev/block/platform/mtk-msdc.0/by-name/ftm_system   
+    symlink /dev/block/mmcblk0p29 /dev/block/platform/mtk-msdc.0/by-name/cache
+    symlink /dev/block/mmcblk0p30 /dev/block/platform/mtk-msdc.0/by-name/userdata 	
