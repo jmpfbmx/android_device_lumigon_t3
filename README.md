@@ -23,6 +23,23 @@ Night Camera | 4MP (OmniVision ov4688mipiraw), Infrared LED Flash, autofocus
 
 This branch it's ONLY for building Android Nougat based ROMs
 
+### WORKING/BUGS ###
+- [x] Wi-Fi
+- [x] Bluetooth
+- [x] OMX
+- [x] Boots
+- [x] HWC
+- [x] Gralloc
+- [x] Camera
+- [x] Video Recording
+- [x] Sound
+- [x] Offline charging
+- [x] RIL
+- [ ] NFC
+- [ ] Vold
+- [ ] Fingerprint
+- [ ] GPS
+
 ### SPECIAL THANKS ###
 - Team MAD
 - LineageOS/CM team
