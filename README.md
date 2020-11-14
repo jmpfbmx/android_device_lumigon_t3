@@ -27,5 +27,6 @@ This branch it's ONLY for building Android Nougat based ROMs
 - Team MAD
 - LineageOS/CM team
 - LeEco Le 1S Devs
+- R0rt1z2
 - More Soon
 
