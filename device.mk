@@ -273,7 +273,9 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    com.android.nfc_extras
+    com.android.nfc_extras \
+    NfcNci \
+    Tag
 
 # Sensor Calibration
 PRODUCT_PACKAGES += libem_sensor_jni
