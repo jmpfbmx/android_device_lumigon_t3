@@ -277,6 +277,13 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+# NFC Configurations
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(DEVICE_PATH)/configs/nfc/nfc.cfg:system/etc/nfc.cfg \
+    $(DEVICE_PATH)/configs/nfc/nfcee_access.xml:system/etc/nfcee_access.xml \
+    $(DEVICE_PATH)/configs/nfc/nfcse.cfg:system/etc/nfcse.cfg
+
 # Sensor Calibration
 PRODUCT_PACKAGES += libem_sensor_jni
 
