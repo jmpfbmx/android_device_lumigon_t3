@@ -50,6 +50,11 @@ ro.sys.usb.bicr=yes
 # USB Charge only function
 ro.sys.usb.charging.only=yes
 
+# NFC
+ro.mtk_nfc_addon_support=1
+ro.mtk_wifiwpsp2p_nfc_support=1
+ro.nfc.port=I2C
+
 # audio
 ro.camera.sound.forced=0
 ro.audio.silent=0
