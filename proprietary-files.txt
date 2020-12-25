@@ -108,6 +108,7 @@ lib/hw/hwcomposer.mt6795.so
 lib/hw/lights.mt6795.so
 lib/hw/memtrack.mt6795.so
 lib/hw/mmsdk.mt6795.so
+lib/hw/nfc_nci.mt6605.default.so|49ea05069f3c3db1edbfc8e50b70861a023e76cc
 lib/hw/sensors.mt6795.so
 lib/lib3a_sample.so
 lib/lib3a.so
@@ -172,6 +173,7 @@ lib/libdngop.so
 lib/libdpframework.so
 lib/libdrmmtkutil.so
 lib/libdrmmtkwhitelist.so
+lib/libdta_mt6605_jni.so
 lib/libem_bt_jni.so
 lib/libem_gpio_jni.so
 lib/libem_lte_jni.so
@@ -231,6 +233,7 @@ lib/libmtk_drvb.so
 lib/libmtkjpeg.so
 lib/libmtklimiter.so
 lib/libmtk_mmutils.so
+lib/libmtknfc.so
 lib/libmtknfc_dynamic_load_jni.so
 lib/libMtkOmxAdpcmDec.so
 lib/libMtkOmxAdpcmEnc.so
@@ -256,6 +259,8 @@ lib/libmtk_vt_swip.so
 lib/libmtk_vt_utils.so
 lib/libn3d3a.so
 lib/libnativecheck-jni.so
+lib/libnfc_mt6605_jni.so
+lib/libnfc_ndef.so
 lib/libnvramagentclient.so
 lib/libnvram_daemon_callback.so
 lib/libnvram_platform.so
@@ -268,6 +273,7 @@ lib/libPQDCjni.so
 lib/libPQjni.so
 lib/libpq_prot.so
 lib/libpqservice.so
+lib/libem_nfc_jni.so
 lib/librilmtkmd2.so
 lib/librilmtk.so
 lib/libshowlogo.so
@@ -312,6 +318,7 @@ lib64/hw/hwcomposer.mt6795.so
 lib64/hw/lights.mt6795.so
 lib64/hw/memtrack.mt6795.so
 lib64/hw/mmsdk.mt6795.so
+lib64/hw/nfc_nci.mt6605.default.so|cf0c908344941008e94938481421f6c90fa17fe5
 lib64/hw/sensors.mt6795.so
 lib64/lib_fpc_ta_shared.so
 lib64/lib3a_sample.so
@@ -364,6 +371,8 @@ lib64/libdngop.so
 lib64/libdpframework.so
 lib64/libdrmmtkutil.so
 lib64/libdrmmtkwhitelist.so
+lib64/libdta_dynamic_load_jni.so
+lib64/libdta_mt6605_jni.so
 lib64/libem_bt_jni.so
 lib64/libem_gpio_jni.so
 lib64/libem_lte_jni.so
@@ -419,6 +428,7 @@ lib64/libmtk_drvb.so
 lib64/libmtkjpeg.so
 lib64/libmtklimiter.so
 lib64/libmtk_mmutils.so
+lib64/libmtknfc.so|95b94bae375a66741615029ff6604b49fbfa5065
 lib64/libmtknfc_dynamic_load_jni.so
 lib64/libMtkOmxCore.so
 lib64/libmtkplayer.so
@@ -432,6 +442,8 @@ lib64/libmtk_vt_swip.so
 lib64/libmtk_vt_utils.so
 lib64/libn3d3a.so
 lib64/libnativecheck-jni.so
+lib64/libnfc_mt6605_jni.so
+lib64/libnfc_ndef.so
 lib64/libnvramagentclient.so
 lib64/libnvram_daemon_callback.so
 lib64/libnvram_platform.so
@@ -444,6 +456,7 @@ lib64/libPQDCjni.so
 lib64/libPQjni.so
 lib64/libpq_prot.so
 lib64/libpqservice.so
+lib64/libem_nfc_jni.so
 lib64/librilmtkmd2.so
 lib64/librilmtk.so
 lib64/libsink.so
@@ -508,3 +521,4 @@ vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 xbin/BGW
 xbin/mnld
+xbin/nfcstackp
