@@ -199,6 +199,17 @@ on post-fs-data
     chown system system /sys/devices/soc/soc:touch@/smartwake_active
     chown system system /sys/devices/soc/soc:touch@/wakeup_gesture
 
+    ##FPC
+    chown system system /dev/spidev0.0
+    chmod 0660 /dev/spidev0.0
+    chown system system /sys/bus/platform/devices/fpc_interrupt.57/clk_enable
+    chown system system /sys/bus/platform/devices/fpc_interrupt.57/wakeup_enable
+    chown system system /sys/bus/platform/devices/fpc_interrupt.57/irq
+    chmod 0200 /sys/bus/platform/devices/fpc_interrupt.57/clk_enable
+    chmod 0200 /sys/bus/platform/devices/fpc_interrupt.57/wakeup_enable
+    chmod 0600 /sys/bus/platform/devices/fpc_interrupt.57/irq
+    mkdir /data/fpc 0770 system system
+
 # -----------------------
 # Add by MTK
     # md32 boot
