@@ -199,6 +199,9 @@ on post-fs-data
     chown system system /sys/devices/soc/soc:touch@/smartwake_active
     chown system system /sys/devices/soc/soc:touch@/wakeup_gesture
 
+    # NFC
+    mkdir /data/nfc_socket 0771 nfc radio
+
     ##FPC
     chown system system /dev/spidev0.0
     chmod 0660 /dev/spidev0.0
