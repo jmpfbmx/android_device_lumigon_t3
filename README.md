@@ -35,9 +35,9 @@ This branch it's ONLY for building Android Nougat based ROMs
 - [x] Sound
 - [x] Offline charging
 - [x] RIL
+- [x] Fingerprint
 - [ ] NFC
 - [ ] Vold
-- [ ] Fingerprint
 - [ ] GPS
 
 ### SPECIAL THANKS ###
